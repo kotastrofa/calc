@@ -41,11 +41,11 @@ public class Main {
     }
 
     public static int sum(int a, int b, String c) {
-        if (a + b > 20 || a + b < 2) {
+        if ((a<0||a>10)||(b<0||b>10)) {
             try {
                 throw new IOException();
             } catch (IOException e) {
-                System.out.println("Калькулятор должен принимать на вход числа от 1 до 10 включительно, не более");
+                System.out.println("Калькулятор должен принимать на вход числа от 1 до 10 включительно");
                 System.exit(0);
             }
         }
@@ -98,15 +98,15 @@ public class Main {
         if (hundreds != 0) {
         RimHundreds[] rimHundredsBase = RimHundreds.values();
         RimHundreds rim_hundreds = rimHundredsBase[hundreds];
-        System.out.println(rim_hundreds.toString());}
+        System.out.print(rim_hundreds.toString());}
         if (tens != 0){
         RimTens[] rimTensBase = RimTens.values();
         RimTens rim_tens = rimTensBase[tens];
-        System.out.println(rim_tens.toString());}
+        System.out.print(rim_tens.toString());}
         if (units != 0){
         RimUnits[] rimUnitsBase = RimUnits.values();
         RimUnits rim_units = rimUnitsBase[units];
-        System.out.println(rim_units.toString());}
+        System.out.print(rim_units.toString());}
 
     }
 
