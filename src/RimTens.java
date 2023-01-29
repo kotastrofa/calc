@@ -1,5 +1,5 @@
 public enum RimTens {
-    O , L, LX, LXX, LXXX, X, XC, XL, XX, XXX
+    O , X, XX, XXX, XL , L, LX, LXX, LXXX, XC
 
 
 }

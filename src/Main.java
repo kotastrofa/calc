@@ -77,7 +77,7 @@ public class Main {
         Rim digits = Rim.valueOf(box[0]);
         int val1 = digits.getArab();
         Rim digits2 = Rim.valueOf(box[2]);
-        int val2 = digits.getArab();
+        int val2 = digits2.getArab();
 
         if (sum(val1, val2, box[1]) < 1) {
             try {
@@ -95,10 +95,14 @@ public class Main {
         int tens = (ra_result % 100) / 10;
         int hundreds = (ra_result % 1000) / 100;
 
-        if (hundreds != 0) {
+
+        String noll = "";
+
+            if (hundreds == 1) {
         RimHundreds[] rimHundredsBase = RimHundreds.values();
         RimHundreds rim_hundreds = rimHundredsBase[hundreds];
-        System.out.print(rim_hundreds.toString());}
+        System.out.print(rim_hundreds.toString());
+                System.exit(0);}
         if (tens != 0){
         RimTens[] rimTensBase = RimTens.values();
         RimTens rim_tens = rimTensBase[tens];
@@ -107,6 +111,8 @@ public class Main {
         RimUnits[] rimUnitsBase = RimUnits.values();
         RimUnits rim_units = rimUnitsBase[units];
         System.out.print(rim_units.toString());}
+
+
 
     }
 
